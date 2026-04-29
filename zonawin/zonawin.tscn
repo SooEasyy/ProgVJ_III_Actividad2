@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b3csh6yfp6dj4"]
+
+[ext_resource type="Script" uid="uid://ctnvegivmwm1" path="res://zonawin/zonawin.gd" id="1_41xjn"]
+[ext_resource type="Texture2D" uid="uid://dcknysahochlf" path="res://zonawin/zonawin.png" id="2_qbx4b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6gh8m"]
+
+[node name="zonawin" type="Area2D" unique_id=1143223184]
+script = ExtResource("1_41xjn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1991019284]
+shape = SubResource("RectangleShape2D_6gh8m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1211784461]
+modulate = Color(0.18924649, 0.18924649, 0.18924649, 1)
+position = Vector2(4.7683716e-07, 4.7683716e-07)
+scale = Vector2(1.2500001, 1.25)
+texture = ExtResource("2_qbx4b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
